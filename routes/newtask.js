@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET new task page. */
 router.get('/', function(req, res, next) {
-    res.render('newtask', { title: 'Put your new tasks here!' });
+    res.render('newtask', { title: 'Create task' });
 });
 
 
@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
     } else {
         console.log('Input was invalid')
     }
-    res.render('newtask', { title: 'Put your new tasks here!' });
+    res.render('newtask', { title: 'Create task' });
 });
 
 module.exports = router;
