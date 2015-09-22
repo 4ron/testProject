@@ -8,7 +8,11 @@
 
         <h1>All tasks</h1>
 
-        durbadurb
+        <ul>
+            <% tasks.forEach(function(t) { %>
+                <li><%= t.tasktext %> | <%= t.deadline %> </li>
+            <% }); %>
+        </ul>
 
     </body>
 </html>
