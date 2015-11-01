@@ -36,3 +36,9 @@ exports.queryAllTasks = function(res, callback) {
     });
 };
 
+exports.setTaskComplete = function(task_id, set_value, callback) {
+  // Sets the task completed variable to true.
+    pg.connect(conString, function(err, client, done) {
+      client.query("UPDATE task_table SET complete=($1) WHERE id=($2)", [set_value, task_id])
+    })
+}
