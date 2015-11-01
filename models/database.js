@@ -5,8 +5,8 @@
 var pg = require('pg');
 
 // var conString = "postgres://konstantinkunz:mamamia@localhost:5432/konstantinkunz";
-// var conString = "postgres://postgres:aron@localhost:5432/testdb1";
-var conString = process.env.DATABASE_URL;
+var conString = "postgres://postgres:aron@localhost:5432/testdb1";
+// var conString = process.env.DATABASE_URL;
 
 // make sure your local db has a table called task_table
 exports.addTaskToDb = function(task) {

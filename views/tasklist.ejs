@@ -2,12 +2,16 @@
 <html>
     <head>
         <title>All tasks</title>
-        <link rel='stylesheet' href='/public/stylesheets/style.css' />
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+        <!-- Javascript -->
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="public/javascript/swipe.js"></script>
+        <script type="text/javascript" src="/js/swipe.js"></script>
     </head>
 
     <body>
@@ -29,12 +33,14 @@
 
         <div data-role="page" id="demo-page" data-title="Inbox" data-url="demo-page">
 
+          <!-- The top header that shows the back buttons -->
             <div data-role="header" data-position="fixed" data-theme="b">
                 <h1>All Tasks</h1>
                 <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
                 <a href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
             </div><!-- /header -->
 
+          <!-- The list of tasks -->
             <div role="main" class="ui-content">
                 <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
                     <li>
@@ -49,6 +55,7 @@
                 </ul>
             </div><!-- /content -->
 
+            <!-- The delete confirmation dialog -->
             <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
                 <p id="question">Are you sure you want to delete:</p>
                     <div class="ui-grid-a">
@@ -61,6 +68,7 @@
                     </div>
             </div><!-- /popup -->
         </div>
+
     </body>
 
 </html>
