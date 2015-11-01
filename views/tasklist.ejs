@@ -10,7 +10,13 @@
 
         <ul>
             <% tasks.forEach(function(t) { %>
-                <li> <b> Task: </b>  <%= t.tasktext %> | <i> Deadline: </i> <%= t.deadline %>  </li>
+                <li>
+                  <b> Task: </b>  <%= t.tasktext %>
+                  |
+                  <i> Deadline: </i> <%= t.deadline %>
+                  |
+                  <i> Complete: </i> <%= t.complete%>
+                </li>
             <% }); %>
         </ul>
 

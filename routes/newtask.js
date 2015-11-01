@@ -23,7 +23,6 @@ router.post('/', function(req, res, next) {
     } else {
         console.log('Input was invalid')
     }
-    
     res.render('newtask', { title: 'Create task' });
 });
 
