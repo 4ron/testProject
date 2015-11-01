@@ -15,21 +15,7 @@
     </head>
 
     <body>
-        <% include templates/header.ejs %>
-
-        <h1>All tasks</h1>
-
-        <ul>
-            <% tasks.forEach(function(t) { %>
-                <li>
-                  <b> Task: </b>  <%= t.tasktext %>
-                  |
-                  <i> Deadline: </i> <%= t.deadline %>
-                  |
-                  <i> Complete: </i> <%= t.complete%>
-                </li>
-            <% }); %>
-        </ul>
+        <!-- <% include templates/header.ejs %> -->
 
         <div data-role="page" id="demo-page" data-title="Inbox" data-url="demo-page">
 
@@ -43,15 +29,19 @@
           <!-- The list of tasks -->
             <div role="main" class="ui-content">
                 <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
+
+                    <!-- Here we iterate through the available tasks -->
+                    <% tasks.forEach(function(t) { %>
                     <li>
                         <a href="#demo-mail">
-                            <h3>Avery Walker</h3>
-                            <p class="topic"><strong>Re: Dinner Tonight</strong></p>
-                            <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
-                            <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                            <h3> <b> Task: </b>  <%= t.tasktext %> </h3>
+                            <p class="topic"><strong><i> Complete: </i> <%= t.complete%></strong></p>
+                            <p class="ui-li-aside"><strong><i> Deadline: </i> <%= t.deadline %></strong></p>
                         </a>
                         <a href="#" class="delete">Delete</a>
                     </li>
+                    <% }); %>
+
                 </ul>
             </div><!-- /content -->
 
