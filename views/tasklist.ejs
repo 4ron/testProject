@@ -9,6 +9,8 @@
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="public/javascript/swipe.js"></script>
     </head>
+
+    <body>
         <% include templates/header.ejs %>
 
         <h1>All tasks</h1>
@@ -26,38 +28,39 @@
         </ul>
 
         <div data-role="page" id="demo-page" data-title="Inbox" data-url="demo-page">
-            <div data-role="header" data-position="fixed" data-theme="b">
-                <h1>Inbox</h1>
+
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <h1>All Tasks</h1>
                 <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
                 <a href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
             </div><!-- /header -->
-        <div role="main" class="ui-content">
-            <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
-                <li>
-                    <a href="#demo-mail">
-                        <h3>Avery Walker</h3>
-                        <p class="topic"><strong>Re: Dinner Tonight</strong></p>
-                        <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
-                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                    </a>
-                    <a href="#" class="delete">Delete</a>
-                </li>
 
-            </ul>
-                </div><!-- /content -->
-                    <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
-                        <p id="question">Are you sure you want to delete:</p>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
-                            </div>
-                            <div class="ui-block-b">
-                                <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
-                            </div>
-                        </div>
-                    </div><!-- /popup -->
-            </div>
+            <div role="main" class="ui-content">
+                <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
+                    <li>
+                        <a href="#demo-mail">
+                            <h3>Avery Walker</h3>
+                            <p class="topic"><strong>Re: Dinner Tonight</strong></p>
+                            <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+                            <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                        </a>
+                        <a href="#" class="delete">Delete</a>
+                    </li>
+                </ul>
+            </div><!-- /content -->
 
+            <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
+                <p id="question">Are you sure you want to delete:</p>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+                        </div>
+                    </div>
+            </div><!-- /popup -->
+        </div>
     </body>
 
 </html>
