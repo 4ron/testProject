@@ -2,18 +2,24 @@
 <html>
 <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% include templates/imports.ejs %>
 </head>
 <body>
-    <% include templates/header.ejs %>
+    <div data-role="page" id="page2" data-title="title - page 2" data-url="page2">
 
-    <h1><%= title %></h1>
+        <% include templates/header.ejs %>
 
-    <form method="post">
-        Task:<input type="text" name="task"><br>
-        Priority:<input type="number" name="prio"><br>
-        Deadline:<input type="text" name="deadline"><br>
-        <input type="submit">
-    </form>
+        <div data-role="main">
+            <h1><%= title %></h1>
+
+            <form method="post">
+                Task:<input type="text" name="task"><br>
+                Priority:<input type="number" name="prio"><br>
+                Deadline:<input type="text" name="deadline"><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

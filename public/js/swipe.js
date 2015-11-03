@@ -1,4 +1,4 @@
-$( document ).on( "pagecreate", "#demo-page", function() {
+$( document ).on( "pagecreate", "#page3", function() {
     // Swipe to remove list item
     $( document ).on( "swipeleft swiperight", "#list li", function( event ) {
         var listitem = $( this ),

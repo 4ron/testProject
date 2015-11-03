@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
 
-  <% include templates/header.ejs %>
+    <head>
+        <!-- <title> <%= title %> </title> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <% include templates/imports.ejs %>
+    </head>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <body>
+        <div data-role="page" id="page1" data-title="title - page 1" data-url="page1">
+
+            <% include templates/header.ejs %>
+
+            <div data-role="main">
+                <h1> <%= title %> </h1>
+                <p> An absolutely pointless homepage. </p>
+            </div>
+
+        </div>
+    </body>
+
 </html>
