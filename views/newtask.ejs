@@ -10,14 +10,32 @@
 
         <% include templates/header.ejs %>
 
-        <div data-role="main">
+        <div data-role="main" class="ui-content">
             <h1><%= title %></h1>
 
-            <form method="post">
-                Task:<input type="text" name="task"><br>
-                Priority:<input type="number" name="prio"><br>
-                Deadline:<input type="text" name="deadline"><br>
-                <input type="submit">
+            <form method="post" class="ui-body ui-body-a ui-corner-all" action="newtask">
+
+                <div data-role="fieldcontain">
+                    <label> Task: </label>
+                    <input type="text" name="task">
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label> Deadline: </label>
+                    <input type="text" name="deadline">
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label> Priority: </label>
+                    <select name="prio">
+                        <option value="1">Low</option>
+                        <option value="2">Medium</option>
+                        <option value="3">High</option>
+                    </select>
+
+                </div>
+
+                <input type="submit" value="Create">
             </form>
         </div>
     </div>
